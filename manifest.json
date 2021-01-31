@@ -1,0 +1,19 @@
+{
+  "name": "DOM manipulator",
+  "version": "1.0",
+  "description": "Interact with DOM elements on open page",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://google.com/*"
+      ],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ]
+}
